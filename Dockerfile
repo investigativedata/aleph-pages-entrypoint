@@ -11,6 +11,5 @@ RUN chown -R 1000:1000 /aleph/aleph/pages
 USER 1000
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-CMD gunicorn -w 8 -b 0.0.0.0:8000 --log-level info --log-file - aleph.manage:app
+CMD ["gunicorn -w 8 -b 0.0.0.0:8000 --log-level info --log-file - aleph.manage:app"]
 
