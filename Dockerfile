@@ -5,9 +5,7 @@ USER root
 RUN apt install curl
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN mkdir /aleph/pages
-RUN cp /aleph/aleph/pages/*.md /aleph/pages/
-RUN chown -R 1000:1000 /aleph/pages
+RUN chown -R 1000:1000 /aleph/aleph/pages
 
 
 USER 1000
